@@ -3,7 +3,7 @@ const controller = require('./animal.controller');
 
 const routes = new Router();
 
-routes.prefix(`/api/${process.env.BASE_API}/animal`);
+routes.prefix(`/api/${process.env.BASE_API}/animais`);
 
 routes.get('/', controller.list);
 routes.get('/:id', controller.getById);
