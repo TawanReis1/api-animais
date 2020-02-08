@@ -6,7 +6,6 @@ class Repository {
         return Animal
         .find(query)
         .limit(paging.limit)
-        .skip(paging.skip)
         .sort(paging.sort)
         .lean()
 

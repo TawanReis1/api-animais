@@ -4,8 +4,6 @@ class PagingHelper {
       const sort = {};
       const page = parseInt(query.page, 10) || 1;
       const limit = parseInt(query.limit, 10) || 10;
-      let skip = (page - 1) * limit;
-      skip = skip < 0 ? 0 : skip;
   
       Object.keys(query).forEach((prop) => {
         if (prop.match('sort_')) {
@@ -16,7 +14,6 @@ class PagingHelper {
       return {
         page,
         limit,
-        skip,
         sort
       };
     }
